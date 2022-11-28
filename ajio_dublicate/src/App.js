@@ -4,7 +4,7 @@ import {Productpage} from "./product_page/productpage.js"
 function App() {
   return (
     <div className="App">
-      <Productpage />
+      {/* <Productpage /> */}
     </div>
   );
 }
