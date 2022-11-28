@@ -5,7 +5,7 @@ export default function MidCol() {
   return (
     <Box h="591px" w="473px" bgColor="red">
       <Image
-        src="https://assets.ajio.com/medias/sys_master/root/20220705/Y80x/62c358e6aeb26921af606ec5/-473Wx593H-464586933-wine-MODEL6.jpg"
+        src="https://thumbs.dreamstime.com/b/nice-to-talk-smart-person-indoor-shot-attractive-interesting-caucasian-guy-smiling-broadly-nice-to-112345489.jpg"
         alt="mainimage"
         width="100%"
         height="100%"

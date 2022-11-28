@@ -5,6 +5,7 @@ import ProductDetails from "./ProductDetails/ProductDetails";
 import ButtonComp from "./ProductDetails/Button";
 import LeftCol from "./ProductDetails/LeftCol";
 import MidCol from "./ProductDetails/MidCol";
+import RightCol from "./ProductDetails/RightCol";
 
 function App() {
   return <div className="App"></div>;
