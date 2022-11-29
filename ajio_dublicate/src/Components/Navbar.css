@@ -1,3 +1,7 @@
 .nav_links > Link {
     text-decoration: none;
 }
+
+.guest_header > div > Link:hover {
+    text-decoration: underline;
+}
