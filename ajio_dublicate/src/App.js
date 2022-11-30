@@ -4,6 +4,7 @@ import Login from './login-component/login';
 import { Route, Routes } from 'react-router-dom';
 import Signup from './login-component/signup';
 import Otp from "./login-component/otp"
+import InitialFocus from './login-component/otp';
 
 function App() {
   return (
