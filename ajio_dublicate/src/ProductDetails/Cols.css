@@ -6,6 +6,8 @@
 }
 .prodDetails {
   text-align: center;
+  width: 403px;
+  margin: auto;
 }
 .prodDetails .brand {
   color: #b19975;
@@ -18,4 +20,25 @@
   margin-top: 0;
   margin-bottom: 10px;
   font-size: 20px;
+}
+.prodDetails .price {
+  font-size: 24px;
+  margin: 0 5px;
+}
+.prodDetails .strPriceDis {
+  color: #b19975;
+  font-size: 14px;
+  font-family: SourceSansPro;
+}
+.prodDetails .strP {
+  text-decoration: line-through;
+}
+.prodDetails .dis {
+  text-decoration: line-through;
+}
+.prodDetails p {
+  padding-top: 3px;
+  font-size: 12px;
+  font-family: SourceSansPro;
+  color: #999;
 }
