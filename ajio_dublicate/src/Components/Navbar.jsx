@@ -2,8 +2,21 @@
 import React from 'react';
 import './Navbar.css'
 import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+
 
 export default function Navbar() {
+    const [data, setData] = useState([]);
+    const fetchDataBycategory = () => {
+        fetch('https://fakestoreapi.com/products/categories')
+            .then(res=>res.json())
+            .then(res2=>setData(res2));
+            console.log(data);
+    }
+
+        useEffect(()=> {
+            fetchDataBycategory();
+        }, [])
     const openDrawer = () => {
         
         document.getElementsByClassName("drawer")[0].style.visibility = "visible";
@@ -56,8 +69,21 @@ export default function Navbar() {
         </div>
         
             
-            <div className= "drawer" style = {{width: "75%" ,height: "500px", backgroundColor: "black", margin: "auto", marginTop: "70px",visibility: "hidden"}}>
+            <div className= "drawer" style = {{width: "1200px" ,height: "500px", backgroundColor: "black", margin: "auto",marginTop: "55px", opacity: "1", display: "block", textTransform: "capitalize", backgroundColor: "#fff", outline: "transparent" ,border: "1px solid grey"}}>
+                    {/* {data.map((elem) => {
+                        return <ul>
+                            <ul>{elem}</ul>
+                            
+                        </ul>
+                    }) } */}
 
+
+                    <div class = "menu_first">
+                        <span> Shop By:</span>
+                        <ul>
+
+                        </ul>
+                    </div>
             </div>
     
     </div>
