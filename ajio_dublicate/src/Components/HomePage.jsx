@@ -161,12 +161,25 @@ export const HomePage = () => {
     </div>
 
     <div className = "latestLauch_section" style = {{display: "flex", overflow: "auto", whiteSpace: "nowrap"}}>
-                <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-LatestLaunches-lancer-neqw.jpg"  alt="" /></div>
-                <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-Latestlaunches-p3-truereligion-new.jpg" alt="" /></div>
-                <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-LatestLaunches-710-new.jpg"  alt="" /></div>
-                <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-LatestLaunches-KendallKylie.jpg"  alt = "" /></div>
-                {/* <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-Latestlaunches-p1-Acai-new.jpg"  alt="" /></div>
-                <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-Latestlaunches-p2-FyreRose-new.jpg"  alt="" /></div> */}
+        <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-LatestLaunches-lancer-neqw.jpg"  alt="" /></div>
+        <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-Latestlaunches-p3-truereligion-new.jpg" alt="" /></div>
+        <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-LatestLaunches-710-new.jpg"  alt="" /></div>
+        <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-LatestLaunches-KendallKylie.jpg"  alt = "" /></div>
+        {/* <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-Latestlaunches-p1-Acai-new.jpg"  alt="" /></div>
+        <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-Latestlaunches-p2-FyreRose-new.jpg"  alt="" /></div> */}
+               
+    </div>
+
+    <div>
+        <img src="https://assets.ajio.com/cms/AJIO/WEB/D-westernwear-Header.jpg" alt="" />
+    </div>
+    <div className="westernWear_wonders">
+        <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-westernwear-p1-starting499.jpg"  alt="" /></div>
+        <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-westernwear-p2-starting599.jpg" alt="" /></div>
+        <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-westernwear-p3-starting999.jpg"  alt="" /></div>
+        <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-westernwear-p4-starting899.jpg"  alt = "" /></div>
+        {/* <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-westernwear-p5-min50.jpg"  alt="" /></div>
+        <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-westernwear-p6-starting399.jpg"  alt="" /></div> */}
                
     </div>
 </div>
