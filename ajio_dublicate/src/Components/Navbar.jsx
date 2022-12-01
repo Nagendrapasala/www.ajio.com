@@ -45,8 +45,8 @@ export default function Navbar() {
                 
             </div>
             <div className='nav_searchbar' style = {{display: "flex"}}>
-                <input type="text" placeholder='Search AJIO' style ={{paddingLeft: "12px", paddingRight: "17px", height: "20px", width: "269px", paddingTop: "12px", marginLeft: "2px", marginTop: "-10px", borderRadius: "17px", border: "1px solid #2c4152", fontFamily: "Helvetica,sans-serif", backgroundColor: "#fffded", fontSize: "14px" }}/>
-                <div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRydbUMW2Zs1TT-YXZ_H7D3xwSOh8nPwwD5Rg&usqp=CAU" height= "25px" alt="" style ={{position: "absolute", marginLeft: "-40px", marginTop: "-6px" }}/></div>
+                <input type="text" placeholder='Search AJIO' style ={{paddingLeft: "15px",paddingBottom: "7px" , paddingRight: "17px", height: "30px", width: "269px", paddingTop: "12px", marginLeft: "2px", marginTop: "-10px", borderRadius: "17px", border: "1px solid #2c4152", fontFamily: "Helvetica,sans-serif", backgroundColor: "#fffded", fontSize: "14px" }}/>
+                {/* <div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRydbUMW2Zs1TT-YXZ_H7D3xwSOh8nPwwD5Rg&usqp=CAU" height= "15px" alt="" style ={{position: "absolute", marginLeft: "-40px", marginTop: "-6px" }}/></div> */}
             </div>
             <div className='nav_buttons' style = {{display: "flex", width: "100px", justifyContent: "space-evenly", alignItems: "center", marginTop: "-25px"}}>
                 <img src="https://assets.ajio.com/static/img/wishlistIcon.svg" alt="" />
@@ -78,11 +78,43 @@ export default function Navbar() {
                     }) } */}
 
 
-                    <div class = "menu_first">
-                        <span> Shop By:</span>
-                        <ul>
-
-                        </ul>
+                    <div class = "menu_first" style = {{display: "flex", justifyContent: "space-evenly", textAlign: "left"}}>
+                        <div className='firstList' style = {{border: "1px solid blue", width: "290px",height: '363px', color: "#333", fontSize: '14px'}}>
+                           <ul><h5>CLOTHING</h5></ul>
+                           <ul><h5>FOOTWEAR</h5></ul>
+                           <ul><h5>ACCESSORIES</h5></ul>
+                           <ul><h5>ALL THATS NEW</h5></ul>
+                           <ul>Clothing</ul>
+                           <ul>Accessories</ul>
+                           <ul>Footwear</ul>
+                        
+                           <ul><h5>INTERNATIONAL BRAND</h5></ul>
+                           <ul><h5>WINTERWEAR</h5></ul>
+                           <ul><h5>NIGHT & LOUNDWEWEAR</h5></ul>
+                           <ul><h5>GROMING</h5></ul>
+                           <ul><h5>ETHNIC AND FESTIVE</h5></ul>
+                        </div>
+                        <div style = {{border: "1px solid blue",width: "290px",height: '363px', color: "#333", fontSize: '14px' }}>
+                            <ul><h5>WESTERN WEAR</h5></ul>
+                            <ul>Jackets</ul>
+                            <ul>Coat</ul>
+                            <ul>Jeans</ul>
+                            <ul>Shirt</ul>
+                            <ul>SweatShirts</ul>
+                            <ul>Pants</ul>
+                            <ul>Trousers</ul>
+                            <ul>Tshirts</ul>
+                            <ul>Track Pants</ul>
+                            <ul><h5>FOOTWEAR</h5></ul>
+                            <ul>Casual Shoes</ul>
+                            <ul>Flip flops & Slippers</ul>
+                            <ul>Formal shoes</ul>
+                            <ul>Sandals</ul>
+                            <ul>Sneakers</ul>
+                            <ul>Sport Shoes</ul>
+                        </div>
+                        <div style =  {{border: "1px solid blue", width: "250px", }}></div>
+                        <div style =  {{border: "1px solid blue", width: "250px", }}></div>
                     </div>
             </div>
     

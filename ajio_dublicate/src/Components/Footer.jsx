@@ -2,8 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 export default function Footer() {
+    
   return (<div className='outerFooter' style = {{backgroundColor: "#2c4152", height: "500px", color: "#ccc", width: "100%", marginTop: "100%",}}>
-            <div className='mainFooter' style = {{ border: "1px solid yellow", height: "400px",display: "flex", flexDirection: "row",justifyContent: "space-evenly", width: "90%", textAlign: "left", margin:" auto" }}>
+            
+            <div className='mainFooter' style = {{  height: "400px",display: "flex", flexDirection: "row",justifyContent: "space-evenly", width: "90%", textAlign: "left", margin:" auto" }}>
                 <div style = {{width: "300px", height: "178px", boxSizing: "border-box", marginTop: "40px"}}>
                     <ul style = {{textDecoration: "none", fontSize: "14px", fontFamily: "SourceSansPro", color: "#ccc"}}>Ajio</ul>
                     <ul ><Link to ="" style = {{textDecoration: "none", fontSize: "12px", fontFamily: "SourceSansPro", color: "#ccc"}}>Who we are</Link></ul>
@@ -50,9 +52,11 @@ export default function Footer() {
             </div>
             <div style = {{width: "90%", margin: "auto"}}>
                 <hr />
-            </div>
-           
+            </div> 
             
     </div>
+
   )
 }
+
+
