@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export default function Footer() {
     
-  return (<div className='outerFooter' style = {{backgroundColor: "#2c4152", height: "500px", color: "#ccc", width: "100%", marginTop: "100%",}}>
+  return (<div className='outerFooter' style = {{backgroundColor: "#2c4152", height: "500px", color: "#ccc", width: "100%"}}>
             
             <div className='mainFooter' style = {{  height: "400px",display: "flex", flexDirection: "row",justifyContent: "space-evenly", width: "90%", textAlign: "left", margin:" auto" }}>
                 <div style = {{width: "300px", height: "178px", boxSizing: "border-box", marginTop: "40px"}}>

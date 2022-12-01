@@ -48,6 +48,26 @@ const images5 = [
     "https://assets.ajio.com/cms/AJIO/WEB/01122022-D-UHP-men-p5-internationalbrands-upto65.jpg"
     
 ]
+const images6 = [
+    "https://assets.ajio.com/cms/AJIO/WEB/01122022-UHP-D-UHPwomen-p1-m&s-newbalance-upto70.jpg",
+    "https://assets.ajio.com/cms/AJIO/WEB/01122022-UHP-D-UHPwomen-p2-fivebyinc5-everqupid-starting799.jpg",
+    "https://assets.ajio.com/cms/AJIO/WEB/01122022-UHP-D-UHPwomen-p3-puma-min40.jpg",
+    "https://assets.ajio.com/cms/AJIO/WEB/01122022-UHP-D-UHPwomen-p4-aurelia-globaldesi-flat65.jpg",
+    "https://assets.ajio.com/cms/AJIO/WEB/01122022-UHP-D-UHPwomen-p5-clovia-zivame-starting199.jpg"
+    
+]
+
+const images7 = [
+    "https://assets.ajio.com/cms/AJIO/WEB/D-Trends-p1-upto70.jpg",
+    "https://assets.ajio.com/cms/AJIO/WEB/D-Trends-p2-min30.jpg",
+    "https://assets.ajio.com/cms/AJIO/WEB/D-UHP-trendscarousel-Azorte-flat30.jpg",
+    "https://assets.ajio.com/cms/AJIO/WEB/D-Trends-p4-min50.jpg",
+    "https://assets.ajio.com/cms/AJIO/WEB/D-Trends-p5-upto70.jpg",
+    "https://assets.ajio.com/cms/AJIO/WEB/D-Trends-p6-starting249.jpg",
+    "https://assets.ajio.com/cms/AJIO/WEB/D-Trends-p7-under499.jpg",
+    "https://assets.ajio.com/cms/AJIO/WEB/D-trends-p8-under999.jpg"
+    
+]
 const responsive = {
     responsiveClass: true,
     loop:true,
@@ -156,7 +176,7 @@ export const HomePage = () => {
         </Box>
         
     </Box>
-    <div className="ajioService_banner">
+    <div className="ajioService_banner" style = {{cursor: "pointer"}}>
         <img src="https://assets.ajio.com/cms/AJIO/WEB/D-AJioservice-header.jpg" alt="" />
     </div>
     <div>
@@ -169,7 +189,7 @@ export const HomePage = () => {
         <img src="https://assets.ajio.com/cms/AJIO/WEB/2022_GAP_AJIO_Cozy%20Club_Desktop_w1440px%20X%20h470px_Unisex.jpg" alt="" />
     </div>
 
-    <div className = "latestLauch_section" style = {{display: "flex", overflow: "auto", whiteSpace: "nowrap"}}>
+    <div className = "latestLauch_section" style = {{display: "flex", overflow: "auto", whiteSpace: "nowrap", cursor: "pointer"}}>
         <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-LatestLaunches-lancer-neqw.jpg"  alt="" /></div>
         <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-Latestlaunches-p3-truereligion-new.jpg" alt="" /></div>
         <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-LatestLaunches-710-new.jpg"  alt="" /></div>
@@ -182,7 +202,7 @@ export const HomePage = () => {
     <div>
         <img src="https://assets.ajio.com/cms/AJIO/WEB/D-westernwear-Header.jpg" alt="" />
     </div>
-    <div className="westernWear_wonders" style = {{display: "flex"}}>
+    <div className="westernWear_wonders" style = {{display: "flex", cursor: "pointer"}}>
         <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-westernwear-p1-starting499.jpg"  alt="" /></div>
         <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-westernwear-p2-starting599.jpg" alt="" /></div>
         <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-westernwear-p3-starting999.jpg"  alt="" /></div>
@@ -205,8 +225,116 @@ export const HomePage = () => {
             ))}
             </OwlCarousel>
         </Box>
-        
     </Box>
+    <div className="herFavt_section">
+        <img src="https://assets.ajio.com/cms/AJIO/WEB/D-UHPWomen-Header.jpg" alt="" />
+    </div>
+
+    <Box width="100%" margin="auto" cursor="pointer" >
+            <Box width="100%" >
+            <OwlCarousel {...responsive} className="owl-theme" >
+            {images6.map((img)=>(
+                <Box key={img} className='hover-underline-banner' width="100%" margin="auto" mt={10} >
+                    <Image w="1468px"  height= "450px" marginTop= {{base: "-45px"}} src={img} />
+                </Box>
+            ))}
+            </OwlCarousel>
+        </Box>
+    </Box>
+
+    <div className="ethnicBanner">
+        <img src="https://assets.ajio.com/cms/AJIO/WEB/D-Gothnic-Header.jpg" alt="" />
+    </div>
+    <div className="ethnic_section" style ={{display: "flex", cursor: "pointer"}}>
+    <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-ethnicwear-kurtas-edited.jpg"  alt="" /></div>
+        <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-Gothnic-p1-starting499.jpg" alt="" /></div>
+        <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-Gothnic-p3-starting499.jpg"  alt="" /></div>
+        <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-Gothnic-p4-upto80.jpg"  alt = "" /></div>
+        {/* <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-ethnicwear-footwear-edited.jpg"  alt="" /></div>
+        <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-Gothnic-p6-starting499.jpg"  alt="" /></div> */}
+    </div>
+    <div className="latestTrends">
+        <img src="https://assets.ajio.com/cms/AJIO/WEB/D-Trends-Header.jpg" alt="" />
+    </div>
+    <Box width="100%" margin="auto" cursor="pointer" >
+            <Box width="100%" >
+            <OwlCarousel {...responsive} className="owl-theme" >
+            {images7.map((img)=>(
+                <Box key={img} className='hover-underline-banner' width="100%" margin="auto" mt={10} >
+                    <Image w="1468px"  height= "450px" marginTop= {{base: "-45px"}} src={img} />
+                </Box>
+            ))}
+            </OwlCarousel>
+        </Box>
+    </Box>
+    <div className="hiddenGemsBanner">
+            <img src="https://assets.ajio.com/cms/AJIO/WEB/D-UHP-hiddengems-header.jpg" alt="" />
+    </div>
+    <div className="hiddenGemsSection" style ={{display: "flex", cursor: "pointer"}}>
+        <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-UHP-hiddengems-nakd.jpg" alt="" /></div>
+        <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-UHP-hiddengems-wknd.jpg"  alt="" /></div>
+        <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-UHP-hiddengems-frenchconnection.jpg"  alt = "" /></div>
+        <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-UHP-hiddengems-lcwaikiki.jpg"  alt="" /></div>
+        {/* <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-Gothnic-p6-starting499.jpg"  alt="" /></div> */} 
+    </div>
+    <div className="amazingAddon_banner">
+        <img src="https://assets.ajio.com/cms/AJIO/WEB/D-Footwear-Header.jpg" alt="" />
+
+    </div>
+    <div className="amazingAddOn_section" style ={{display: "flex", cursor: "pointer"}}>
+        <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-Footwear-p1-sports&casualshoes.jpg" alt="" /></div>
+        <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-Footwear-p2-flipflops,sandals.jpg"  alt="" /></div>
+        <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-Footwear-p3-sneakers.jpg"  alt = "" /></div>
+        <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-Footwear-p4-watches.jpg"  alt="" /></div>
+        {/* <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-Gothnic-p6-starting499.jpg"  alt="" /></div> */} 
+    </div>
+    <div className="lookLikeAStar_banner">
+        <img src="https://assets.ajio.com/cms/AJIO/WEB/D-Celeb-Header.jpg" alt="" />
+    </div>
+    <div className= "lookLikeAStar_section" style ={{display: "flex", cursor: "pointer"}}>
+        <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-Celeb-p1-Levis.jpg" alt="" /></div>
+        <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-Celeb-p2-puma.jpg"  alt="" /></div>
+        <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-Celeb-p13-Performax.jpg"  alt = "" /></div>
+        <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-Celeb-p3-adidas.jpg"  alt="" /></div>
+        {/* <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-Gothnic-p6-starting499.jpg"  alt="" /></div> */} 
+
+    </div>
+    <div className="lilChamps_banner">
+            <img src="https://assets.ajio.com/cms/AJIO/WEB/D-kidswear-header.jpg" alt="" />
+    </div>
+    <div className= "lilChanps_section" style ={{display: "flex", cursor: "pointer"}}>
+        <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-kidswear-p1-3060.jpg" alt="" /></div>
+        <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-kidswear-p2-starting559ac.jpg"  alt="" /></div>
+        <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-kidswear-p3-min40.jpg"  alt = "" /></div>
+        <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-kidswear-p4-upto70.jpg"  alt="" /></div>
+        {/* <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-Gothnic-p6-starting499.jpg"  alt="" /></div> */} 
+
+    </div>
+    <div className="bandOfBrand_banner">
+        <img src="https://assets.ajio.com/cms/AJIO/WEB/D-BandofBrands-Header.jpg" alt="" />
+    </div>
+    <div className= "bandsOfBrands_section" style ={{display: "flex", cursor: "pointer"}}>
+        <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-BandofBrands-p1-uspa.jpg" alt="" /></div>
+        <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-BandofBrands-p2-M&S.jpg"  alt="" /></div>
+        <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-BandofBrands-p3-nike.jpg"  alt = "" /></div>
+        <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-BandofBrands-p4-ax.jpg"  alt="" /></div>
+        {/* <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-Gothnic-p6-starting499.jpg"  alt="" /></div> */} 
+
+    </div>
+    <div className="grid" style = {{display: "grid", gridTemplateColumns: "repeat(4,1fr)"}}>
+        <div style = {{marginRight: "0.5px", marginBottom: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-DiscOnlineStores-p1-trends.jpg" alt="" /></div>
+        <div style = {{marginRight: "0.5px", marginBottom: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-DiscOnlineStores-p1-trends.jpg" alt="" /></div>
+        <div style = {{marginRight: "0.5px", marginBottom: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-DiscOnlineStores-p3-home.jpg" alt="" /></div>
+        <div style = {{marginRight: "0.5px", marginBottom: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-DiscOnlineStores-p4-sneakerrhood.jpg" alt="" /></div>
+        <div style = {{marginRight: "0.5px", marginBottom: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-DiscOnlineStores-p9-winterwear.jpg" alt="" /></div>
+        <div style = {{marginRight: "0.5px", marginBottom: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-DiscOnlineStores-p5-aceesories.jpg" alt="" /></div>
+        <div style = {{marginRight: "0.5px", marginBottom: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-DiscOnlineStores-p6-beauty.jpg" alt="" /></div>
+        <div style = {{marginRight: "0.5px", marginBottom: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-DiscOnlineStores-p7-internationalbrands.jpg" alt="" /></div>
+
+    </div>
+    <div className="ajioCares">
+            <img src="https://assets.ajio.com/cms/AJIO/WEB/08032022-D-unisex-ajiocares-strip%20new%20d.jpg" alt="" />
+    </div>
 </div>
   )
 }
