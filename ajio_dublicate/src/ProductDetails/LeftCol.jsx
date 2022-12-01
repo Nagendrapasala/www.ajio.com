@@ -3,7 +3,7 @@ import { Image, VStack } from "@chakra-ui/react";
 
 export default function LeftCol() {
   return (
-    <div>
+    <div className="left">
       <VStack direction="column">
         <Image
           boxSize="52px"

@@ -8,9 +8,13 @@ export default function ProductDetails() {
   return (
     <div className="descPage">
       <div className="cols">
+        {/* <div className="leftMid">
+        </div> */}
+        {/* <div> */}
         <LeftCol />
         <MidCol />
         <RightCol />
+        {/* </div> */}
       </div>
     </div>
   );
