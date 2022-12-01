@@ -173,7 +173,7 @@ export const HomePage = () => {
     <div>
         <img src="https://assets.ajio.com/cms/AJIO/WEB/D-westernwear-Header.jpg" alt="" />
     </div>
-    <div className="westernWear_wonders">
+    <div className="westernWear_wonders" style = {{display: "flex"}}>
         <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-westernwear-p1-starting499.jpg"  alt="" /></div>
         <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-westernwear-p2-starting599.jpg" alt="" /></div>
         <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-westernwear-p3-starting999.jpg"  alt="" /></div>
