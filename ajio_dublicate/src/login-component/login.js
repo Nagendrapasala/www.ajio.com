@@ -1,9 +1,6 @@
-import { type } from "@testing-library/user-event/dist/type";
 import React, { useRef, useState } from "react";
 import { Button, FormControl, FormLabel, Image, Input, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, PinInput, PinInputField, useDisclosure } from "@chakra-ui/react"
 import Signup from "./signup";
-import { Icon } from "@chakra-ui/react";
-import Otp from "./otp";
 
 function Login() {
     let [flag, setFlag] = useState(true);
