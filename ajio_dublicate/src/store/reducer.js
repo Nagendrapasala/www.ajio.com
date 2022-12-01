@@ -12,6 +12,7 @@ export const reducer = (storedata=store_data,action) => {
             data:action.payload
         }
     }
+    
     default:{
         return storedata
     }
