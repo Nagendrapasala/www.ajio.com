@@ -9,7 +9,7 @@ const images = [
     "https://assets.ajio.com/cms/AJIO/WEB/29112022-D-MHP-topbanner-midseasonsale-4080.jpg",
     "https://assets.ajio.com/cms/AJIO/WEB/01122022-D-MHP-topbannercarousel-p3-categorydays-internationalbrands-upto70.jpg",
     "https://assets.ajio.com/cms/AJIO/WEB/01122022-D-MHP-topbannercarousel-p1-stealoftheday-sportsshoes-brands-under2299.jpg",
-    "https://assets.ajio.com/cms/AJIO/WEB/01122022-D-MHP-topbannercarousel-p3-categorydays-internationalbrands-upto70.jpg",
+    "https://assets.ajio.com/cms/AJIO/WEB/03122022-D-UHP-topbanner-Prebuzz-5090.gif",
     
 ]
 
@@ -37,6 +37,15 @@ const images4 = [
     "https://assets.ajio.com/cms/AJIO/WEB/1122022-d-uhp-JIT-p5-leewrangler-brands-min50.jpg",
     "https://assets.ajio.com/cms/AJIO/WEB/1122022-d-uhp-JIT-p6-westerndresses-brands-starting499.jpg",
     "https://assets.ajio.com/cms/AJIO/WEB/1122022-d-uhp-JIT-p7-innerwear-brands-starting199.jpg"
+    
+]
+
+const images5 = [
+    "https://assets.ajio.com/cms/AJIO/WEB/01122022-D-UHP-men-p1-brands-shirts-flat65.jpg",
+    "https://assets.ajio.com/cms/AJIO/WEB/01122022-D-UHP-men-p2-brands-min50.jpg",
+    "https://assets.ajio.com/cms/AJIO/WEB/01122022-D-UHP-men-p3-brands-footwear-3060.jpg",
+    "https://assets.ajio.com/cms/AJIO/WEB/01122022-D-UHP-men-p5-internationalbrands-upto65.jpg",
+    "https://assets.ajio.com/cms/AJIO/WEB/01122022-D-UHP-men-p5-internationalbrands-upto65.jpg"
     
 ]
 const responsive = {
@@ -182,6 +191,22 @@ export const HomePage = () => {
         <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-westernwear-p6-starting399.jpg"  alt="" /></div> */}
                
     </div>
+    <div className = "himFavt_section">
+        <img src="https://assets.ajio.com/cms/AJIO/WEB/D-UHPmen-Header.jpg" alt="" />
+
+    </div>
+    <Box width="100%" margin="auto" cursor="pointer" >
+            <Box width="100%" >
+            <OwlCarousel {...responsive} className="owl-theme" >
+            {images5.map((img)=>(
+                <Box key={img} className='hover-underline-banner' width="100%" margin="auto" mt={10} >
+                    <Image w="1468px"  height= "450px" marginTop= {{base: "-45px"}} src={img} />
+                </Box>
+            ))}
+            </OwlCarousel>
+        </Box>
+        
+    </Box>
 </div>
   )
 }
