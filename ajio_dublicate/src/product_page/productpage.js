@@ -1,10 +1,11 @@
 import React,{useEffect, useState} from 'react'
-import { action } from '../store/action.js'
+import { Add,Change } from '../store/action.js'
 import {useDispatch,useSelector} from "react-redux"
 import "./style.css"
 import {Display} from "./Display.js"
 import { AccordionItem1 } from './AccordionItem.js'
 import {
+  useControllableState,
   MinusIcon,
   AddIcon,
   Box,
@@ -40,7 +41,7 @@ let mainproductfour = {
   padding: "30px",
 }
 export const Productpage = () => {
-  const[mydata,setMydata] = useState([]);
+  const [value, setValue] = useControllableState({ defaultValue: [] })
   const[check,setCheck] = useState(true);
 let dispatch = useDispatch()
 let data = useSelector((storedata)=>(storedata.data))
@@ -48,12 +49,14 @@ useEffect(()=>{
   if(data.length===0){
   fetch(`http://localhost:3000/data`)
   .then(res=>res.json())
-  .then(json=>(action(json,dispatch),setMydata(json)))
+  .then(json=>(Add(json,dispatch),setValue(json)))
+
   }
   
 },[])
-let filter_names = ["Gender","Category","Price","Discount","Brand","Size"]
-
+useEffect(()=>{
+  setValue(data)
+},[setValue])
 function three(){
   setCheck(true);
 }
@@ -62,18 +65,19 @@ function four(){
 }
 function Highprice(){
   data.sort((a,b)=>(b.price-a.price))
-  setMydata(data)
+
+  setValue(data)
 }
 function Lowprice(){
   data.sort((a,b)=>(a.price-b.price))
-  setMydata(data)
+  setValue(data)
 }
 function Relevance(){
-  setMydata(data)
+  setValue(data)
 }
 function Discount(){
  data.sort((a,b)=>(b.offer_percent-a.offer_percent))
-  setMydata(data)
+ setValue(data)
 }
 let product_filter = {
   Gender : ["Male","FeMale"],
@@ -82,6 +86,11 @@ let product_filter = {
   Brand:['PUMA','LEVIS','ADIDAS'],
   Discount:['21-30%','31-40%','41-50','51-80%','Free'],
   Size:['S','M','L','XL','XXL','XXXL']
+}
+function change_filter(v){
+  let arr = data.filter(e=>(v===e.v))
+  console.log(arr)
+  setValue(arr);
 }
   return (
     <div id='parent'>
@@ -96,8 +105,102 @@ let product_filter = {
         <AccordionIcon />
       </AccordionButton>
     </h2>
-    {filter_names.map(e=>(<AccordionItem1 name={e} array={product_filter.Price} />))}
+    <AccordionPanel pb={4}>
+    <Accordion defaultIndex={[0]} allowMultiple>
+  <AccordionItem >
+    <h2>
+      <AccordionButton>
+        <Box flex='1' textAlign='left' fontWeight = 'bold'>
+          Gender
+        </Box>
+        <AccordionIcon />
+      </AccordionButton>
+    </h2>
+    <AccordionItem1 name={product_filter.Gender} arr={change_filter} />
   </AccordionItem>
+</Accordion>
+    </AccordionPanel>
+
+    <AccordionPanel pb={4}>
+    <Accordion defaultIndex={[0]} allowMultiple>
+  <AccordionItem >
+    <h2>
+      <AccordionButton>
+        <Box flex='1' textAlign='left' fontWeight = 'bold'>
+          Category
+        </Box>
+        <AccordionIcon />
+      </AccordionButton>
+    </h2>
+    <AccordionItem1 name={product_filter.Category} arr={change_filter}/>
+  </AccordionItem>
+</Accordion>
+    </AccordionPanel>
+
+    <AccordionPanel pb={4}>
+    <Accordion defaultIndex={[0]} allowMultiple>
+  <AccordionItem >
+    <h2>
+      <AccordionButton>
+        <Box flex='1' textAlign='left' fontWeight = 'bold'>
+          Price
+        </Box>
+        <AccordionIcon />
+      </AccordionButton>
+    </h2>
+    <AccordionItem1 name={product_filter.Price} arr={change_filter}/>
+  </AccordionItem>
+</Accordion>
+    </AccordionPanel>
+
+    <AccordionPanel pb={4}>
+    <Accordion defaultIndex={[0]} allowMultiple>
+  <AccordionItem >
+    <h2>
+      <AccordionButton>
+        <Box flex='1' textAlign='left' fontWeight = 'bold'>
+          Discount
+        </Box>
+        <AccordionIcon />
+      </AccordionButton>
+    </h2>
+    <AccordionItem1 name={product_filter.Discount} arr={change_filter}/>
+  </AccordionItem>
+</Accordion>
+    </AccordionPanel>
+
+    <AccordionPanel pb={4}>
+    <Accordion defaultIndex={[0]} allowMultiple>
+  <AccordionItem >
+    <h2>
+      <AccordionButton>
+        <Box flex='1' textAlign='left' fontWeight = 'bold'>
+          Brand
+        </Box>
+        <AccordionIcon />
+      </AccordionButton>
+    </h2>
+    <AccordionItem1 name={product_filter.Brand} arr={change_filter}/>
+  </AccordionItem>
+</Accordion>
+    </AccordionPanel>
+
+    <AccordionPanel pb={4}>
+    <Accordion defaultIndex={[0]} allowMultiple>
+  <AccordionItem >
+    <h2>
+      <AccordionButton>
+        <Box flex='1' textAlign='left' fontWeight = 'bold'>
+          Size
+        </Box>
+        <AccordionIcon />
+      </AccordionButton>
+    </h2>
+    <AccordionItem1 name={product_filter.Size} arr={change_filter}/>
+  </AccordionItem>
+</Accordion>
+    </AccordionPanel>
+    </AccordionItem>
 
   <AccordionItem>
     <h2>
@@ -133,7 +236,7 @@ let product_filter = {
     SORT BY
   </MenuButton>
   <MenuList>
-    <MenuItem><button onClick={Highprice}>price(high to low)</button></MenuItem>
+    <MenuItem><Button onClick={Highprice}>price(high to low)</Button></MenuItem>
     <MenuItem><button onClick={Relevance}>Relevance</button></MenuItem>
     <MenuItem><button onClick={Discount}>Discount</button></MenuItem>
     <MenuItem><button onClick={Lowprice}>price(low to high)</button></MenuItem>
@@ -142,10 +245,11 @@ let product_filter = {
           </div>
           
         </div>
-        {mydata.length>0?
+        {value.length>0?
         <div  style={check?mainproduct:mainproductfour}>
-        {mydata.map(e=>(<Display image={e.image[0]} title={e.title} price={e.price} Brand={e.brand} offer={e.offer_percent} key={e.id}/>))}
-        </div>:<div>LOADING...</div>}
+        {value.map(e=>(<Display image={e.image[0]} title={e.title} price={e.price} Brand={e.brand} offer={e.offer_percent} key={e.id}/>))}
+        </div>
+        :<div>LOADING...</div>}
         
       </div>
     </div>
