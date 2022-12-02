@@ -98,12 +98,12 @@ export const HomePage = () => {
 
   return (
     <div>
-    <Box width="100%" margin="auto" cursor="pointer" >
+    <Box width="100%" margin="auto"  cursor="pointer" overflow= "visible">
         <Box width="100%" >
             <OwlCarousel {...responsive} className="owl-theme" >
             {images.map((img)=>(
                 <Box key={img} className='hover-underline-banner' width="100%" margin="auto" mt={10} >
-                    <Image w="1468px"  height= "450px" marginTop= {{base: "-45px"}} src={img} />
+                    <Image w="1468px"  height= "450px" marginTop= {{base: "100px"}} src={img} />
                 </Box>
             ))}
             </OwlCarousel>
