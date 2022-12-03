@@ -6,17 +6,17 @@ import { useState, useEffect } from "react";
 
 
 export default function Navbar() {
-    const [data, setData] = useState([]);
-    const fetchDataBycategory = () => {
-        fetch('https://fakestoreapi.com/products/categories')
-            .then(res=>res.json())
-            .then(res2=>setData(res2));
-            console.log(data);
-    }
+    // const [data, setData] = useState([]);
+    // const fetchDataBycategory = () => {
+    //     fetch('https://fakestoreapi.com/products/categories')
+    //         .then(res=>res.json())
+    //         .then(res2=>setData(res2));
+    //         console.log(data);
+    // }
 
-        useEffect(()=> {
-            fetchDataBycategory();
-        }, [])
+    //     useEffect(()=> {
+    //         fetchDataBycategory();
+    //     }, [])
     const openDrawer = () => {
         
         document.getElementsByClassName("drawer")[0].style.visibility = "visible";
@@ -36,11 +36,11 @@ export default function Navbar() {
 
                 </div>
                 <div className='nav_links' style = {{display: "flex", justifyContent: "space-between", alignContent: "center", width: "492px"}}>
-                    <Link to = "shop/men" style = {{textDecoration: "none", color: "#333", fontFamily: "SourceSansPro", fontSize: "15px"}} onMouseEnter = {openDrawer} onMouseLeave = {closeDrawer}>MEN</Link>
-                    <Link to = "shop/women" style = {{textDecoration: "none", color: "#333", fontFamily: "SourceSansPro", fontSize: "15px"}}>WOMEN</Link>
-                    <Link to = "shop/kids" style = {{textDecoration: "none", color: "#333", fontFamily: "SourceSansPro", fontSize: "15px"}}>KIDS</Link>
-                    <Link to = "shop/indie" style = {{textDecoration: "none", color: "#333", fontFamily: "SourceSansPro", fontSize: "15px"}}>INDIE</Link>
-                    <Link to = "shop/home" style = {{textDecoration: "none", color: "#333", fontFamily: "SourceSansPro", fontSize: "15px"}}>HOME AND KITCHEN</Link>
+                    <Link to = "/men" style = {{textDecoration: "none", color: "#333", fontFamily: "SourceSansPro", fontSize: "15px"}}>MEN</Link>
+                    <Link to = "/women" style = {{textDecoration: "none", color: "#333", fontFamily: "SourceSansPro", fontSize: "15px"}}>WOMEN</Link>
+                    <Link to = "/kids" style = {{textDecoration: "none", color: "#333", fontFamily: "SourceSansPro", fontSize: "15px"}}>KIDS</Link>
+                    <Link to = "/indie" style = {{textDecoration: "none", color: "#333", fontFamily: "SourceSansPro", fontSize: "15px"}}>INDIE</Link>
+                    {/* <Link to = "/" style = {{textDecoration: "none", color: "#333", fontFamily: "SourceSansPro", fontSize: "15px"}}>HOME AND KITCHEN</Link> */}
                 </div>
                 
             </div>
@@ -60,7 +60,7 @@ export default function Navbar() {
         <div className='guest_header' style = {{display: "flex", flexDirection: "row-reverse" ,width: "500px", justifyContent: "space-evenly" ,alignItems: "center", marginTop: "-150px", marginLeft: "920px"}}>
                     <div></div>
                     <div style = {{backgroundColor: "black", padding: "5px 10px 7px"}}><Link to = "" style = {{textDecoration: "none", color: "#fff", fontFamily: "SourceSansPro", fontSize: "12px"}}>Vist AJIOLUXE</Link></div>
-                    <div><Link to = " " style = {{textDecoration: "none", color: "#3E5060", fontFamily: "SourceSansPro", fontSize: "12px"}}>Customer Care</Link></div>
+                    <div><Link to = "" style = {{textDecoration: "none", color: "#3E5060", fontFamily: "SourceSansPro", fontSize: "12px"}}>Customer Care</Link></div>
                     <div><Link to = " " style = {{textDecoration: "none", color: "#3E5060", fontFamily: "SourceSansPro", fontSize: "12px"}}>Sign Out</Link></div>
                     <div><Link to = "" style = {{textDecoration: "none", color: "#3E5060", fontFamily: "SourceSansPro", fontSize: "12px"}}>My Account</Link></div>
                     

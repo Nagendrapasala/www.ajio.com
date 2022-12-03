@@ -100,9 +100,9 @@ export const HomePage = () => {
     <div>
     <Box width="100%" margin="auto"  cursor="pointer" overflow= "visible">
         <Box width="100%" >
-            <OwlCarousel {...responsive} className="owl-theme" >
-            {images.map((img)=>(
-                <Box key={img} className='hover-underline-banner' width="100%" margin="auto" mt={10} >
+            <OwlCarousel {...responsive} className="owl-theme1" >
+            {images.map((img, idx)=>(
+                <Box key = {idx+1} className='hover-underline-banner1' width="100%" margin="auto" mt={10} >
                     <Image w="1468px"  height= "450px" marginTop= {{base: "100px"}} src={img} />
                 </Box>
             ))}
@@ -112,10 +112,10 @@ export const HomePage = () => {
     </Box>
     <Box width="100%" margin="auto" cursor="pointer">
     <Box width="100%" >
-        <OwlCarousel {...responsive} className="owl-theme" >
-        {images2.map((img)=>(
-            <Box key={img} className='hover-underline-banner' width="100%" margin="auto" mt={10} >
-                <Image w="1434px"  height= "123px" marginTop= {{base: "-45px"}} src={img} />
+        <OwlCarousel {...responsive} className="owl-theme2" >
+        {images2.map((img1, idx)=>(
+            <Box key = {idx +1} className='hover-underline-banner2' width="100%" margin="auto" mt={10} >
+                <Image w="1434px"  height= "123px" marginTop= {{base: "-45px"}} src={img1} />
             </Box>
         ))}
         </OwlCarousel>
@@ -140,10 +140,10 @@ export const HomePage = () => {
             </div>
             <Box width="100%" margin="auto" cursor="pointer" >
             <Box width="100%" >
-            <OwlCarousel {...responsive} className="owl-theme" >
-            {images3.map((img)=>(
-                <Box key={img} className='hover-underline-banner' width="100%" margin="auto" mt={10} >
-                    <Image w="1468px"  height= "450px" marginTop= {{base: "-45px"}} src={img} />
+            <OwlCarousel {...responsive} className="owl-theme3" >
+            {images3.map((img2, idx)=>(
+                <Box key = {idx + 1}className='hover-underline-banner3' width="100%" margin="auto" mt={10} >
+                    <Image w="1468px"  height= "450px" marginTop= {{base: "-45px"}} src={img2} />
                 </Box>
             ))}
             </OwlCarousel>
@@ -166,10 +166,10 @@ export const HomePage = () => {
 
         <Box width="100%" margin="auto" cursor="pointer" >
             <Box width="100%" >
-            <OwlCarousel {...responsive} className="owl-theme" >
-            {images4.map((img)=>(
-                <Box key={img} className='hover-underline-banner' width="100%" margin="auto" mt={10} >
-                    <Image w="1468px"  height= "450px" marginTop= {{base: "-45px"}} src={img} />
+            <OwlCarousel {...responsive} className="owl-theme4" >
+            {images4.map((img3, idx)=>(
+                <Box key = {idx + 1}className='hover-underline-banner4' width="100%" margin="auto" mt={10} >
+                    <Image w="1468px"  height= "450px" marginTop= {{base: "-45px"}} src={img3} />
                 </Box>
             ))}
             </OwlCarousel>
@@ -194,8 +194,8 @@ export const HomePage = () => {
         <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-Latestlaunches-p3-truereligion-new.jpg" alt="" /></div>
         <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-LatestLaunches-710-new.jpg"  alt="" /></div>
         <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-LatestLaunches-KendallKylie.jpg"  alt = "" /></div>
-        {/* <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-Latestlaunches-p1-Acai-new.jpg"  alt="" /></div>
-        <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-Latestlaunches-p2-FyreRose-new.jpg"  alt="" /></div> */}
+        <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-Latestlaunches-p1-Acai-new.jpg"  alt="" /></div>
+        <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-Latestlaunches-p2-FyreRose-new.jpg"  alt="" /></div> 
                
     </div>
 
@@ -207,8 +207,8 @@ export const HomePage = () => {
         <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-westernwear-p2-starting599.jpg" alt="" /></div>
         <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-westernwear-p3-starting999.jpg"  alt="" /></div>
         <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-westernwear-p4-starting899.jpg"  alt = "" /></div>
-        {/* <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-westernwear-p5-min50.jpg"  alt="" /></div>
-        <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-westernwear-p6-starting399.jpg"  alt="" /></div> */}
+        <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-westernwear-p5-min50.jpg"  alt="" /></div>
+        <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-westernwear-p6-starting399.jpg"  alt="" /></div>
                
     </div>
     <div className = "himFavt_section">
@@ -217,10 +217,10 @@ export const HomePage = () => {
     </div>
     <Box width="100%" margin="auto" cursor="pointer" >
             <Box width="100%" >
-            <OwlCarousel {...responsive} className="owl-theme" >
-            {images5.map((img)=>(
-                <Box key={img} className='hover-underline-banner' width="100%" margin="auto" mt={10} >
-                    <Image w="1468px"  height= "450px" marginTop= {{base: "-45px"}} src={img} />
+            <OwlCarousel {...responsive} className="owl-theme5" >
+            {images5.map((img4, idx)=>(
+                <Box key = {idx + 1}className='hover-underline-banner5' width="100%" margin="auto" mt={10} >
+                    <Image w="1468px"  height= "450px" marginTop= {{base: "-45px"}} src={img4} />
                 </Box>
             ))}
             </OwlCarousel>
@@ -232,10 +232,10 @@ export const HomePage = () => {
 
     <Box width="100%" margin="auto" cursor="pointer" >
             <Box width="100%" >
-            <OwlCarousel {...responsive} className="owl-theme" >
-            {images6.map((img)=>(
-                <Box key={img} className='hover-underline-banner' width="100%" margin="auto" mt={10} >
-                    <Image w="1468px"  height= "450px" marginTop= {{base: "-45px"}} src={img} />
+            <OwlCarousel {...responsive} className="owl-theme6" >
+            {images6.map((img5, idx)=>(
+                <Box  key = {idx + 1}className='hover-underline-banner6' width="100%" margin="auto" mt={10} >
+                    <Image w="1468px"  height= "450px" marginTop= {{base: "-45px"}} src={img5} />
                 </Box>
             ))}
             </OwlCarousel>
@@ -246,22 +246,22 @@ export const HomePage = () => {
         <img src="https://assets.ajio.com/cms/AJIO/WEB/D-Gothnic-Header.jpg" alt="" />
     </div>
     <div className="ethnic_section" style ={{display: "flex", cursor: "pointer"}}>
-    <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-ethnicwear-kurtas-edited.jpg"  alt="" /></div>
+        <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-ethnicwear-kurtas-edited.jpg"  alt="" /></div>
         <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-Gothnic-p1-starting499.jpg" alt="" /></div>
         <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-Gothnic-p3-starting499.jpg"  alt="" /></div>
         <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-Gothnic-p4-upto80.jpg"  alt = "" /></div>
-        {/* <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-ethnicwear-footwear-edited.jpg"  alt="" /></div>
-        <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-Gothnic-p6-starting499.jpg"  alt="" /></div> */}
+        <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-ethnicwear-footwear-edited.jpg"  alt="" /></div>
+        <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-Gothnic-p6-starting499.jpg"  alt="" /></div>
     </div>
     <div className="latestTrends">
         <img src="https://assets.ajio.com/cms/AJIO/WEB/D-Trends-Header.jpg" alt="" />
     </div>
     <Box width="100%" margin="auto" cursor="pointer" >
             <Box width="100%" >
-            <OwlCarousel {...responsive} className="owl-theme" >
-            {images7.map((img)=>(
-                <Box key={img} className='hover-underline-banner' width="100%" margin="auto" mt={10} >
-                    <Image w="1468px"  height= "450px" marginTop= {{base: "-45px"}} src={img} />
+            <OwlCarousel {...responsive} className="owl-theme7" >
+            {images7.map((img6, idx)=>(
+                <Box  key = { idx + 1}className='hover-underline-banner7' width="100%" margin="auto" mt={10} >
+                    <Image w="1468px"  height= "450px" marginTop= {{base: "-45px"}} src={img6} />
                 </Box>
             ))}
             </OwlCarousel>
@@ -275,7 +275,7 @@ export const HomePage = () => {
         <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-UHP-hiddengems-wknd.jpg"  alt="" /></div>
         <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-UHP-hiddengems-frenchconnection.jpg"  alt = "" /></div>
         <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-UHP-hiddengems-lcwaikiki.jpg"  alt="" /></div>
-        {/* <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-Gothnic-p6-starting499.jpg"  alt="" /></div> */} 
+        <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-Gothnic-p6-starting499.jpg"  alt="" /></div> 
     </div>
     <div className="amazingAddon_banner">
         <img src="https://assets.ajio.com/cms/AJIO/WEB/D-Footwear-Header.jpg" alt="" />
@@ -286,7 +286,7 @@ export const HomePage = () => {
         <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-Footwear-p2-flipflops,sandals.jpg"  alt="" /></div>
         <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-Footwear-p3-sneakers.jpg"  alt = "" /></div>
         <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-Footwear-p4-watches.jpg"  alt="" /></div>
-        {/* <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-Gothnic-p6-starting499.jpg"  alt="" /></div> */} 
+        <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-Gothnic-p6-starting499.jpg"  alt="" /></div> 
     </div>
     <div className="lookLikeAStar_banner">
         <img src="https://assets.ajio.com/cms/AJIO/WEB/D-Celeb-Header.jpg" alt="" />
@@ -296,7 +296,7 @@ export const HomePage = () => {
         <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-Celeb-p2-puma.jpg"  alt="" /></div>
         <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-Celeb-p13-Performax.jpg"  alt = "" /></div>
         <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-Celeb-p3-adidas.jpg"  alt="" /></div>
-        {/* <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-Gothnic-p6-starting499.jpg"  alt="" /></div> */} 
+        <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-Gothnic-p6-starting499.jpg"  alt="" /></div> 
 
     </div>
     <div className="lilChamps_banner">
@@ -307,7 +307,7 @@ export const HomePage = () => {
         <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-kidswear-p2-starting559ac.jpg"  alt="" /></div>
         <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-kidswear-p3-min40.jpg"  alt = "" /></div>
         <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-kidswear-p4-upto70.jpg"  alt="" /></div>
-        {/* <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-Gothnic-p6-starting499.jpg"  alt="" /></div> */} 
+        <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-Gothnic-p6-starting499.jpg"  alt="" /></div> 
 
     </div>
     <div className="bandOfBrand_banner">
@@ -318,7 +318,7 @@ export const HomePage = () => {
         <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-BandofBrands-p2-M&S.jpg"  alt="" /></div>
         <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-BandofBrands-p3-nike.jpg"  alt = "" /></div>
         <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-BandofBrands-p4-ax.jpg"  alt="" /></div>
-        {/* <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-Gothnic-p6-starting499.jpg"  alt="" /></div> */} 
+        <div style = {{marginRight: "0.5px"}}><img src="https://assets.ajio.com/cms/AJIO/WEB/D-Gothnic-p6-starting499.jpg"  alt="" /></div> 
 
     </div>
     <div className="grid" style = {{display: "grid", gridTemplateColumns: "repeat(4,1fr)"}}>
