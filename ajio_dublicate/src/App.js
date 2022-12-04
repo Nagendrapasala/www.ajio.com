@@ -19,7 +19,7 @@ function App() {
         
         <Routes>
           
-          <Route path = "/men" element = {<h1>MEN</h1>}/>
+          <Route path = {`/productPage/${Men}`} element = {<ProductPage/>}/>
           <Route path = "/women" element = {<h1>WOMEN</h1>}/>
           <Route path = "/kids" element = {<h1>KIDS</h1>}/>
           <Route path = "/" element = {<HomePage/>}/>
