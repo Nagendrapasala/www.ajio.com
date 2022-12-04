@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="App">
      
-        <Navbar/> 
+        {/* <Navbar/> 
         
           
        
@@ -21,12 +21,12 @@ function App() {
           
           <Route path = {`/productPage/${Men}`} element = {<ProductPage/>}/>
           <Route path = "/women" element = {<h1>WOMEN</h1>}/>
-          <Route path = "/kids" element = {<h1>KIDS</h1>}/>
+          <Route path = "/kids" element = {<h1></h1>}/>
           <Route path = "/" element = {<HomePage/>}/>
           <Route path = "/contact" element = {<Contact/>}/>
         </Routes>
         
-        <Footer/>
+        <Footer/> */}
         
        
         
