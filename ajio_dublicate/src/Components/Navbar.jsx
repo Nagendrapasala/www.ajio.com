@@ -3,6 +3,7 @@ import React from 'react';
 import './Navbar.css';
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
+import '../App.css';
 
 
 export default function Navbar() {
@@ -25,7 +26,7 @@ export default function Navbar() {
         document.getElementsByClassName("drawer")[0].style.visibility = "hidden";
     }
   return (
-    <div className= "navbar" style = {{width: "100%", position :"fixed",top: "0",height: "90px", borderTop: "3px solid #2c4152", backgroundColor: "#fff",fontFamily: "SourceSansPro", boxShadow: "0 3px 6px 0 rgb(0 0 0 / 20%)", borderBottom: "1px solid #e0e0e0"}}>
+    <div className= "navbar" style = {{width: "100%", position :"fixed",top: "0",height: "90px", borderTop: "3px solid #2c4152", backgroundColor: "#fff",fontFamily: "SourceSansPro", boxShadow: "0 3px 6px 0 rgb(0 0 0 / 20%)", borderBottom: "1px solid #e0e0e0",  zIndex: "900"}}>
         <div className= "ajio_logo" style = {{display: "flex", alignItems: "flex-start", marginLeft: "127px"}} >
             <img src="https://assets.ajio.com/static/img/Ajio-Logo.svg" width = "130px" height = "38px" alt="" style = {{boxSizing: "border-box", margin: "24px 0px 0px", cursor: "pointer"}} />
         </div>
@@ -36,11 +37,11 @@ export default function Navbar() {
 
                 </div>
                 <div className='nav_links' style = {{display: "flex", justifyContent: "space-between", alignContent: "center", width: "492px"}}>
-                    <Link to = "/men" style = {{textDecoration: "none", color: "#333", fontFamily: "SourceSansPro", fontSize: "15px"}}>MEN</Link>
-                    <Link to = "/women" style = {{textDecoration: "none", color: "#333", fontFamily: "SourceSansPro", fontSize: "15px"}}>WOMEN</Link>
-                    <Link to = "/kids" style = {{textDecoration: "none", color: "#333", fontFamily: "SourceSansPro", fontSize: "15px"}}>KIDS</Link>
-                    <Link to = "/indie" style = {{textDecoration: "none", color: "#333", fontFamily: "SourceSansPro", fontSize: "15px"}}>INDIE</Link>
-                    {/* <Link to = "/" style = {{textDecoration: "none", color: "#333", fontFamily: "SourceSansPro", fontSize: "15px"}}>HOME AND KITCHEN</Link> */}
+                    <Link to = {"/men"} style = {{textDecoration: "none", color: "#333", fontFamily: "SourceSansPro", fontSize: "15px"}}>MEN</Link>
+                    <Link to = {"/women"} style = {{textDecoration: "none", color: "#333", fontFamily: "SourceSansPro", fontSize: "15px"}}>WOMEN</Link>
+                    <Link to = {"/kids"} style = {{textDecoration: "none", color: "#333", fontFamily: "SourceSansPro", fontSize: "15px"}}>KIDS</Link>
+                    <Link to = {"/indie"} style = {{textDecoration: "none", color: "#333", fontFamily: "SourceSansPro", fontSize: "15px"}}>INDIE</Link>
+                    <Link to = "/" style = {{textDecoration: "none", color: "#333", fontFamily: "SourceSansPro", fontSize: "15px"}}>HOME AND KITCHEN</Link>
                 </div>
                 
             </div>
@@ -60,7 +61,7 @@ export default function Navbar() {
         <div className='guest_header' style = {{display: "flex", flexDirection: "row-reverse" ,width: "500px", justifyContent: "space-evenly" ,alignItems: "center", marginTop: "-150px", marginLeft: "920px"}}>
                     <div></div>
                     <div style = {{backgroundColor: "black", padding: "5px 10px 7px"}}><Link to = "" style = {{textDecoration: "none", color: "#fff", fontFamily: "SourceSansPro", fontSize: "12px"}}>Vist AJIOLUXE</Link></div>
-                    <div><Link to = "" style = {{textDecoration: "none", color: "#3E5060", fontFamily: "SourceSansPro", fontSize: "12px"}}>Customer Care</Link></div>
+                    <div><Link to = "/contact" style = {{textDecoration: "none", color: "#3E5060", fontFamily: "SourceSansPro", fontSize: "12px"}}>Contact Us</Link></div>
                     <div><Link to = " " style = {{textDecoration: "none", color: "#3E5060", fontFamily: "SourceSansPro", fontSize: "12px"}}>Sign Out</Link></div>
                     <div><Link to = "" style = {{textDecoration: "none", color: "#3E5060", fontFamily: "SourceSansPro", fontSize: "12px"}}>My Account</Link></div>
                     

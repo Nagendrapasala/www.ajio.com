@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import '../App.css';
 export default function Footer() {
     
   return (<div className='outerFooter' style = {{backgroundColor: "#2c4152", height: "500px", color: "#ccc", width: "100%"}}>

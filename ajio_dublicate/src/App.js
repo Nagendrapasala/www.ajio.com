@@ -1,18 +1,31 @@
 
-import './App.css';
+
 import Navbar from './Components/Navbar';
 import Footer from './Components/Footer'
 import { HomePage } from './Components/HomePage';
-import AllRoutes from './Components/AllRoutes';
+import Contact from './Components/Contact';
+import {Routes, Route} from "react-router-dom";
+import { ChakraProvider } from '@chakra-ui/react';
 
 
 function App() {
   return (
     <div className="App">
      
-        <Navbar/>
-        {/* <HomePage/> */}
-        <AllRoutes/> 
+        <Navbar/> 
+        
+          
+       
+        
+        <Routes>
+          
+          <Route path = "/men" element = {<h1>MEN</h1>}/>
+          <Route path = "/women" element = {<h1>WOMEN</h1>}/>
+          <Route path = "/kids" element = {<h1>KIDS</h1>}/>
+          <Route path = "/" element = {<HomePage/>}/>
+          <Route path = "/contact" element = {<Contact/>}/>
+        </Routes>
+        
         <Footer/>
         
        

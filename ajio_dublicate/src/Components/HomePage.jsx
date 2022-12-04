@@ -1,7 +1,7 @@
 import React from "react";
 import 'owl.carousel/dist/assets/owl.carousel.min.css'
 import 'owl.carousel/dist/assets/owl.theme.default.min.css'
-import { Box, Image } from '@chakra-ui/react';
+import { Box, ChakraProvider, Image } from '@chakra-ui/react';
 import OwlCarousel from 'react-owl-carousel'
 
 
@@ -98,7 +98,8 @@ export const HomePage = () => {
 
   return (
     <div>
-    <Box width="100%" margin="auto"  cursor="pointer" overflow= "visible">
+    
+    <Box width="100%" marginTop=  "30px" cursor="pointer" overflow= "hidden">
         <Box width="100%" >
             <OwlCarousel {...responsive} className="owl-theme1" >
             {images.map((img, idx)=>(
@@ -110,6 +111,9 @@ export const HomePage = () => {
         </Box>
         
     </Box>
+    
+
+    
     <Box width="100%" margin="auto" cursor="pointer">
     <Box width="100%" >
         <OwlCarousel {...responsive} className="owl-theme2" >
@@ -122,6 +126,7 @@ export const HomePage = () => {
     </Box>
     
 </Box>
+
             <div className="bag_section_banner" style = {{marginTop: "10px", cursor: "pointer"}}>
                 <img src="https://assets.ajio.com/cms/AJIO/WEB/D-opt-1.gif" width= "1440px"height = "90" alt="" />
             </div>
@@ -138,6 +143,7 @@ export const HomePage = () => {
             <div>
                 <img src="https://assets.ajio.com/cms/AJIO/WEB/D-Bestsellers-Header.jpg" alt="" />
             </div>
+            
             <Box width="100%" margin="auto" cursor="pointer" >
             <Box width="100%" >
             <OwlCarousel {...responsive} className="owl-theme3" >
@@ -150,6 +156,7 @@ export const HomePage = () => {
         </Box>
         
     </Box>
+    
         <div className="ajio_exclusive_section" style = {{marginTop: "4px"}}>
             <img src="https://assets.ajio.com/cms/AJIO/WEB/D-ExclusivelyonAJIO-Header.jpg" alt="" />
         </div>
@@ -163,7 +170,7 @@ export const HomePage = () => {
                 <div><img src="https://assets.ajio.com/cms/AJIO/WEB/D-JIT-Header.jpg" alt="" /></div>
 
         </div>
-
+        
         <Box width="100%" margin="auto" cursor="pointer" >
             <Box width="100%" >
             <OwlCarousel {...responsive} className="owl-theme4" >
@@ -176,6 +183,7 @@ export const HomePage = () => {
         </Box>
         
     </Box>
+   
     <div className="ajioService_banner" style = {{cursor: "pointer"}}>
         <img src="https://assets.ajio.com/cms/AJIO/WEB/D-AJioservice-header.jpg" alt="" />
     </div>
@@ -215,6 +223,7 @@ export const HomePage = () => {
         <img src="https://assets.ajio.com/cms/AJIO/WEB/D-UHPmen-Header.jpg" alt="" />
 
     </div>
+
     <Box width="100%" margin="auto" cursor="pointer" >
             <Box width="100%" >
             <OwlCarousel {...responsive} className="owl-theme5" >
@@ -226,10 +235,11 @@ export const HomePage = () => {
             </OwlCarousel>
         </Box>
     </Box>
+   
     <div className="herFavt_section">
         <img src="https://assets.ajio.com/cms/AJIO/WEB/D-UHPWomen-Header.jpg" alt="" />
     </div>
-
+    
     <Box width="100%" margin="auto" cursor="pointer" >
             <Box width="100%" >
             <OwlCarousel {...responsive} className="owl-theme6" >
@@ -241,6 +251,7 @@ export const HomePage = () => {
             </OwlCarousel>
         </Box>
     </Box>
+   
 
     <div className="ethnicBanner">
         <img src="https://assets.ajio.com/cms/AJIO/WEB/D-Gothnic-Header.jpg" alt="" />
@@ -256,6 +267,8 @@ export const HomePage = () => {
     <div className="latestTrends">
         <img src="https://assets.ajio.com/cms/AJIO/WEB/D-Trends-Header.jpg" alt="" />
     </div>
+
+    
     <Box width="100%" margin="auto" cursor="pointer" >
             <Box width="100%" >
             <OwlCarousel {...responsive} className="owl-theme7" >
@@ -267,6 +280,7 @@ export const HomePage = () => {
             </OwlCarousel>
         </Box>
     </Box>
+   
     <div className="hiddenGemsBanner">
             <img src="https://assets.ajio.com/cms/AJIO/WEB/D-UHP-hiddengems-header.jpg" alt="" />
     </div>
