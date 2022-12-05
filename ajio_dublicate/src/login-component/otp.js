@@ -26,6 +26,7 @@ function Otp() {
     let navigate = useNavigate();
 
     const handleLogIn = () => {
+        console.log("call");
         navigate("/");
     }
 
@@ -51,7 +52,7 @@ function Otp() {
                     </ModalBody>
 
                     <ModalFooter>
-                        <Button  onClick = {handleLogIn}>
+                        <Button onClick={handleLogIn}>
                             START SHOPPING
                         </Button>
                         <Button onClick={onClose}>Cancel</Button>

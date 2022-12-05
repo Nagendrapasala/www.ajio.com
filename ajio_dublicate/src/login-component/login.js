@@ -13,7 +13,7 @@ function Login() {
     const finalRef = React.useRef(null)
 
     const addUser = async (users) => {
-        
+
         let details = {
             email: email.current.value,
         }
@@ -48,8 +48,8 @@ function Login() {
 
             checkUser(loginData);
         }
-       localStorage.setItem("auth", true);
-    
+        localStorage.setItem("auth", true);
+
     }
 
     const getOtp = () => {
@@ -121,7 +121,7 @@ function Login() {
                         </ModalBody>
 
                         <ModalFooter>
-                            <button className="otp_btn" colorScheme='blue' mr={3} onClick={onClose}>
+                            <button className="otp_btn" onClick={onClose}>
                                 START SHOPPING
                             </button>
                         </ModalFooter>
