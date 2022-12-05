@@ -1,6 +1,7 @@
 import { ChevronLeftIcon } from "@chakra-ui/icons";
 import { Button, FormControl, FormLabel, Input, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, Text, useDisclosure } from "@chakra-ui/react"
 import React from "react";
+import "../login.css"
 
 function Signup(props) {
     const { isOpen, onOpen, onClose } = useDisclosure()

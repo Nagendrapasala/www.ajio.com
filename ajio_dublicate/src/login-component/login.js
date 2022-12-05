@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import { Button, FormControl, FormLabel, Image, Input, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, PinInput, PinInputField, useDisclosure } from "@chakra-ui/react"
 import Signup from "./signup";
+import "../login.css"
 
 function Login() {
     let [flag, setFlag] = useState(true);
