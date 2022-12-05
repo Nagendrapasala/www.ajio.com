@@ -25,7 +25,7 @@ function Cart() {
     const deleteItem = (ind) => {
         deleteCartAction(cartData, dispatch, ind)
     }
-
+    
     return (
         <div className="cart_parent_div">
             <div className="cart_parent_child_div">
@@ -36,7 +36,7 @@ function Cart() {
                         <p className="cart_div_child_p">{e.elem.title}</p>
                         <div className="cart_child_child1_div"><Quenatity value={{ index: ind, quantity: e.elem.Quantity }} /> {e.elem.Quantity}</div>
                         <div className="cart_child_child_div">
-                            <p>Savings : <span className="price_brown_class">Rs. {parseInt((item.elem.price) + ((item.elem.offer_percent)/100) * (item.elem.price)) - e.elem.price}</span></p>
+                            <p>Savings : <span className="price_brown_class">Rs. {parseInt((e.elem.price) + ((e.elem.offer_percent)/100) * (e.elem.price)) - e.elem.price}</span></p>
                             <p className="price_brown_class_line">Rs. {e.elem.strikedoffPrice}</p><span className="price_brown_class"> ({Math.floor((e.elem.strikedoffPrice - e.elem.price) * 100 / e.elem.strikedoffPrice)}%)</span>
                             <p>Rs. {e.elem.price}.00</p>
                             <button onClick={() => deleteItem(ind)}>Delete</button>
