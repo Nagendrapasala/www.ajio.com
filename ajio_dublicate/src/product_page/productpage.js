@@ -3,6 +3,7 @@ import { Add,Change } from '../store/action.js'
 import {useDispatch,useSelector} from "react-redux"
 import "./style.css"
 import {Display} from "./Display.js"
+import '../App.css';
 import { AccordionItem1 } from './AccordionItem.js'
 import {
   useControllableState,

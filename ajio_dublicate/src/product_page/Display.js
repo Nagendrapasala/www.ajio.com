@@ -1,5 +1,6 @@
 import React from 'react'
 import "./style.css"
+import '../App.css';
 export const Display = ({image,title,price,Brand,offer}) => {
   return (
     <div className='product'>
