@@ -52,3 +52,10 @@ export const updateCart = (data, dispatch) => {
         payload: data,
     })
 }
+export const logInAction = (dispatch) => {
+    console.log("ACTION");
+    dispatch({
+        type: "LOGIN",
+       
+    })
+}

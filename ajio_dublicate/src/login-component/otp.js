@@ -14,13 +14,20 @@
 import { Button, FormControl, FormLabel, Input, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, useDisclosure } from "@chakra-ui/react"
 import React from "react";
 import "../login.css";
+// import { logInAction } from "../store/action";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 function Otp() {
     const { isOpen, onOpen, onClose } = useDisclosure()
-
+    let dispatch = useDispatch();
     const initialRef = React.useRef(null)
     const finalRef = React.useRef(null)
+    let navigate = useNavigate();
 
+    const handleLogIn = () => {
+        navigate("/");
+    }
 
     return (
         <>
@@ -44,7 +51,7 @@ function Otp() {
                     </ModalBody>
 
                     <ModalFooter>
-                        <Button colorScheme='blue' mr={3}>
+                        <Button  onClick = {handleLogIn}>
                             START SHOPPING
                         </Button>
                         <Button onClick={onClose}>Cancel</Button>

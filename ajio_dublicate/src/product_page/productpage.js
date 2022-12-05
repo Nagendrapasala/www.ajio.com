@@ -46,15 +46,16 @@ export const Productpage = () => {
   const[check,setCheck] = useState(true);
 let dispatch = useDispatch()
 let data = useSelector((storedata)=>(storedata.data))
-useEffect(()=>{
-  if(data.length===0){
-  fetch(`http://localhost:3000/data`)
-  .then(res=>res.json())
-  .then(json=>(Add(json,dispatch),setValue(json)))
+// useEffect(()=>{
+//   if(data.length===0){
+//   fetch(`http://localhost:3000/data`)
+//   .then(res=>res.json())
+//   .then(json=>(Add(json,dispatch),setValue(json)))
 
-  }
+//   }
   
-},[])
+// },[])
+
 useEffect(()=>{
   setValue(data)
 },[setValue])
@@ -81,7 +82,7 @@ function Discount(){
  setValue(data)
 }
 let product_filter = {
-  Gender : ["Male","FeMale"],
+  Gender : ["Male","Female"],
   Category : ["Tshirts","Track Pants","Sneakers & Sports Shoes","Shorts & 3/4ths","Sweatshirt & Hoodies","Jackets & Coats","Flip Flop & Slippers","Bags,Belts & Wallets"],
   Price:["Below 500","500-1000","1001-1500","1501-2000","2001-2500","Above 2500"],
   Brand:['PUMA','LEVIS','ADIDAS'],

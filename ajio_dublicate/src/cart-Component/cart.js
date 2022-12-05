@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { deleteCartAction } from "../store/action";
 import "./cart.css"
 import Quenatity from "../cart-Component/quantity-cart";
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -11,6 +12,7 @@ function Cart() {
     let [bagtotal, setTotal] = useState("0");
     let [totalprice, setPrice] = useState("0");
     let [cartData, setCartData] = useState(JSON.parse(localStorage.getItem("cart")));
+    let navigate = useNavigate();
     console.log(cartData);
     // let cartData = useSelector((storedata) => { return storedata.cart })
     useEffect(() => {
@@ -46,11 +48,13 @@ function Cart() {
             </div>
             <div className="total_price_parent_div">
                 <h4>Order Details</h4>
-                <p>Bag total <span className="span1">Rs. {bagtotal}</span></p>
-                <p>Bag discount<span className="span2">-Rs. {bagtotal - totalprice}</span></p>
+                <p>Bag total <span className="span1">Rs. {parseInt(bagtotal)}</span></p>
+                <p>Bag discount<span className="span2">-Rs. {parseInt(bagtotal - totalprice)}</span></p>
                 <p>Delivery Fee<span className="span3">Free <span>Rs. 99.00</span></span></p>
-                <h4>Order Total<span className="span4">Rs. {totalprice}</span></h4>
-                <button>PROCEED TO SHIPPING</button>
+                <h4>Order Total<span className="span4">Rs. {parseInt(totalprice)}</span></h4>
+                <button onClick = {(() => {
+                    navigate("/payment");
+                })}>PROCEED TO SHIPPING</button>
             </div>
         </div >
     )

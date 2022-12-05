@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import { Button, FormControl, FormLabel, Image, Input, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, PinInput, PinInputField, useDisclosure } from "@chakra-ui/react"
+import { Button, FormControl, FormLabel, Image, Input, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, PinInput, PinInputField, useDisclosure, Text } from "@chakra-ui/react"
 import Signup from "./signup";
 import "../login.css"
 
@@ -12,17 +12,13 @@ function Login() {
     const initialRef = React.useRef(null)
     const finalRef = React.useRef(null)
 
-    const addUser = async () => {
+    const addUser = async (users) => {
+        
         let details = {
             email: email.current.value,
         }
-        let res = await fetch("http://localhost:3001/users", {
-            method: "POST",
-            body: JSON.stringify(details),
-            headers: {
-                "Content-Type": "application/json",
-            },
-        });
+        users.push(details);
+        localStorage.setItem("logIn", JSON.stringify(users));
     }
 
     const checkUser = (users) => {
@@ -37,21 +33,23 @@ function Login() {
             email.current.value = "";
         }
         else {
-            addUser()
+            addUser(users)
             setFlag2(true);
         }
     }
+
 
     const handleLogin = async () => {
         if (!email.current.value) {
             alert("Enter Email")
         }
         else {
-            let res = await fetch("http://localhost:3001/users");
-            let users = await res.json();
-            checkUser(users);
-        }
+            let loginData = JSON.parse(localStorage.getItem("logIn")) || [];
 
+            checkUser(loginData);
+        }
+       localStorage.setItem("auth", true);
+    
     }
 
     const getOtp = () => {
@@ -61,7 +59,7 @@ function Login() {
 
     return (
         <div>
-            <Button onClick={onOpen}>Sign In</Button>
+            <p onClick={onOpen}>Sign In</p>
             {flag ?
                 <Modal
                     initialFocusRef={initialRef}

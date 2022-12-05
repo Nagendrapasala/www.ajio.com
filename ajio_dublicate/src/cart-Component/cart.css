@@ -106,19 +106,20 @@
 .total_price_parent_div {
     background-color: rgb(250, 246, 246);
     height: 251px;
+    
 }
 
 .total_price_parent_div .span1 {
-    margin-left: 175px;
+    margin-left: 120px;
 }
 
 .total_price_parent_div .span2 {
-    margin-left: 144px;
+    margin-left: 90px;
     color: #c2913e;
 }
 
 .total_price_parent_div .span3 {
-    margin-left: 127px;
+    margin-left: 63px;
     color: #c2913e;
 }
 
@@ -127,7 +128,7 @@
 }
 
 .total_price_parent_div .span4 {
-    margin-left: 148px;
+    margin-left: 98px;
 }
 
 .total_price_parent_div button {
