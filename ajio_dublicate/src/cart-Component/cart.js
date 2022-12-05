@@ -4,11 +4,15 @@ import { deleteCartAction } from "../store/action";
 import "./cart.css"
 import Quenatity from "../cart-Component/quantity-cart";
 
+
+
 function Cart() {
     let dispatch = useDispatch();
     let [bagtotal, setTotal] = useState("0");
     let [totalprice, setPrice] = useState("0");
-    let cartData = useSelector((storedata) => { return storedata.cart })
+    let [cartData, setCartData] = useState(localStorage.getItem("cart"));
+    console.log(cartData);
+    // let cartData = useSelector((storedata) => { return storedata.cart })
     useEffect(() => {
         setTotal(0);
         setPrice(0);
@@ -26,16 +30,15 @@ function Cart() {
         <div className="cart_parent_div">
             <div className="cart_parent_child_div">
                 <p>My Bag <span>({cartData.length})</span></p>
-                {cartData.map((elem, ind) => {
+                {cartData.map((e, ind) => {
                     return <div key={ind + 1} className="cart_child_div">
-                        <img src={elem.image_url} alt={elem.name} />
-                        <p className="cart_div_child_p">{elem.name}</p>
-                        <p className="cart_child_p">size {elem.size}</p>
-                        <div className="cart_child_child1_div"><Quenatity value={{ index: ind, quantity: elem.Quantity }} /> {elem.Quantity}</div>
+                        <img src={e.elem.image} alt={elem.title} />
+                        <p className="cart_div_child_p">{e.elem.title}</p>
+                        <div className="cart_child_child1_div"><Quenatity value={{ index: ind, quantity: e.elem.Quantity }} /> {e.elem.Quantity}</div>
                         <div className="cart_child_child_div">
-                            <p>Savings : <span className="price_brown_class">Rs. {elem.strikedoffPrice - elem.price}</span></p>
-                            <p className="price_brown_class_line">Rs. {elem.strikedoffPrice}</p><span className="price_brown_class"> ({Math.floor((elem.strikedoffPrice - elem.price) * 100 / elem.strikedoffPrice)}%)</span>
-                            <p>Rs. {elem.price}.00</p>
+                            <p>Savings : <span className="price_brown_class">Rs. {parseInt((item.elem.price) + ((item.elem.offer_percent)/100) * (item.elem.price)) - e.elem.price}</span></p>
+                            <p className="price_brown_class_line">Rs. {e.elem.strikedoffPrice}</p><span className="price_brown_class"> ({Math.floor((e.elem.strikedoffPrice - e.elem.price) * 100 / e.elem.strikedoffPrice)}%)</span>
+                            <p>Rs. {e.elem.price}.00</p>
                             <button onClick={() => deleteItem(ind)}>Delete</button>
                         </div>
                     </div>

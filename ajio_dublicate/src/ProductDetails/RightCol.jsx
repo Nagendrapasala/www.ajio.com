@@ -2,17 +2,26 @@ import React from "react";
 import "../ProductDetails/Cols.css";
 import ButtonComp from "./Button";
 import { IoLocationOutline } from "react-icons/io5";
+import { useSelector } from "react-redux";
+
+
+
 
 export default function RightCol() {
+  const item = useSelector((storeData) => {
+      return storeData.myPage;
+      
+  })
+  console.log(item);
   return (
     <div className="prodDetails">
-      <h2 className="brand">GLAM ROOTS</h2>
-      <h1 className="prodName">Floral Flare Kurta</h1>
-      <h3 className="price">₹800</h3>
+      <h2 className="brand">{item.elem.brand}</h2>
+      <h1 className="prodName">{item.elem.title}</h1>
+      <h3 className="price">{item.elem.price}</h3>
       <div className="strPriceDis">
-        MRP <span className="strP">₹1999</span>
+        MRP <span className="strP">₹{ parseInt((item.elem.price) + ((item.elem.offer_percent)/100) * (item.elem.price)) }</span>
         <span className="dis">
-          <strong> (60% OFF)</strong>
+          <strong> ({item.elem.offer_percent}%)</strong>
         </span>{" "}
       </div>
       <p>Price inclusive of all taxes</p>

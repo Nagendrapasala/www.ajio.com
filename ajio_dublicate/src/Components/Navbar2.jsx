@@ -4,9 +4,9 @@ import Login from '../login-component/login';
 
 export default function Navbar2() {
   return (
-    <div className= "navbar" style = {{ width: "100%", height: "90px",position :"fixed",top: "0",  borderTop: "3px solid #2c4152", backgroundColor: "#fff",fontFamily: "SourceSansPro", boxShadow: "0 3px 6px 0 rgb(0 0 0 / 20%)", borderBottom: "1px solid #e0e0e0",  zIndex: "101"}}>
+    <div className= "navbar" style = {{ width: "100%", height: "90px",position :"fixed",top: "0",  borderTop: "3px solid #2c4152", backgroundColor: "#fff",fontFamily: "SourceSansPro", boxShadow: "0 3px 6px 0 rgb(0 0 0 / 20%)", borderBottom: "1px solid #e0e0e0",  zIndex: "101", marginTop: "-0.5px"}}>
        <div className= "ajio_logo" style = {{ width: "150px"}} >
-            <img src="https://assets.ajio.com/static/img/Ajio-Logo.svg" width = "130px" height = "38px" alt="" style = {{boxSizing: "border-box", margin: "0px 0px 0px", cursor: "pointer", marginLeft: "10px"}} />
+            <Link to = "/"><img src="https://assets.ajio.com/static/img/Ajio-Logo.svg" width = "130px" height = "38px" alt="" style = {{boxSizing: "border-box", margin: "0px 0px 0px", cursor: "pointer", marginLeft: "10px"}} /></Link>
         </div>
         <div className='nav_header_right_outer' style = {{ width: "100%", display: "flex", flexDirection: "row", marginTop: "50px", marginLeft: "440px"}}>
             <div className='nav_header_right' style = {{ height: "40px" , width: "712px",display: "flex" ,fontFamily: "SourceSansPro",  marginLeft:"160px",  }}>
@@ -27,9 +27,9 @@ export default function Navbar2() {
             </div>
             <div className='nav_buttons' style = {{ display: "flex", width: "120px", justifyContent: "space-evenly", alignItems: "center"}}>
                 <img src="https://assets.ajio.com/static/img/wishlistIcon.svg" alt="" />
-                <div className='icon_cart' style = {{backgroundColor: "#2A3F51", height: "34px", width:"34px", borderRadius: "17px"}}>
+                <Link to = "/cart"><div className='icon_cart' style = {{backgroundColor: "#2A3F51", height: "34px", width:"34px", borderRadius: "17px"}}>
                   
-            </div>
+            </div></Link>
                 
         </div>
         </div>
@@ -39,7 +39,7 @@ export default function Navbar2() {
                     <div></div>
                     <div style = {{backgroundColor: "black"}}><Link to = "" style = {{textDecoration: "none", color: "black", fontFamily: "SourceSansPro", fontSize: "12px", color: "#fff"}}>Vist AJIOLUXE</Link></div>
                     <div><Link to = "/contact" style = {{textDecoration: "none", color: "#3E5060", fontFamily: "SourceSansPro", fontSize: "12px"}}>Contact Us</Link></div>
-                    <div><p style = {{textDecoration: "none", color: "#3E5060", fontFamily: "SourceSansPro", fontSize: "12px"}}><Login/></p></div>
+                    <div><div style = {{textDecoration: "none", color: "#3E5060", fontFamily: "SourceSansPro", fontSize: "12px"}}><Login/></div></div>
                     <div><Link to = "" style = {{textDecoration: "none", color: "#3E5060", fontFamily: "SourceSansPro", fontSize: "12px"}}>My Account</Link></div>
                     
                    

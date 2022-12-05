@@ -5,6 +5,8 @@ import RightCol from "./RightCol";
 import "./Cols.css";
 
 export default function ProductDetails() {
+
+
   return (
     <div className="descPage">
       <div className="cols">

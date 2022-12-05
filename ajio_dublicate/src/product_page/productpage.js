@@ -248,7 +248,7 @@ function change_filter(v){
         </div>
         {value.length>0?
         <div  style={check?mainproduct:mainproductfour}>
-        {value.map(e=>(<Display image={e.image[0]} title={e.title} price={e.price} Brand={e.brand} offer={e.offer_percent} key={e.id}/>))}
+        {value.map(e=>(<Display elem = {e} key = {e.id}/>))}
         </div>
         :<div>LOADING...</div>}
         

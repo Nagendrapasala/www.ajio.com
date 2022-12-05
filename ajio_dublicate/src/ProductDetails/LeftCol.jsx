@@ -1,7 +1,15 @@
 import React from "react";
 import { Image, VStack } from "@chakra-ui/react";
+import { ImageAction } from "../store/action";
+import { useDispatch } from "react-redux";
 
 export default function LeftCol() {
+  let dispatch = useDispatch();
+  const item = JSON.parse(localStorage.getItem("item"));
+    const handleImage = (data) => {
+    ImageAction(data, dispatch)
+    }
+ 
   return (
     <div className="left">
       <VStack direction="column">
@@ -9,37 +17,31 @@ export default function LeftCol() {
           boxSize="52px"
           height="66px"
           object-fit="cover"
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvBR5bnG1AfHRJ8kX79I-1Z1EfNvxKyZqiM27HASBL&s"
+          src={item.elem.image[0]}
           alt="iamge"
-        />
+         onClick = {() => handleImage(item.elem.image[0])}/>
         <Image
           boxSize="52px"
           height="66px"
           object-fit="cover"
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvBR5bnG1AfHRJ8kX79I-1Z1EfNvxKyZqiM27HASBL&s"
+          src={item.elem.image[1]}
           alt="iamge"
-        />
+          onClick = {() => handleImage(item.elem.image[1])}/>
         <Image
           boxSize="52px"
           height="66px"
           object-fit="cover"
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvBR5bnG1AfHRJ8kX79I-1Z1EfNvxKyZqiM27HASBL&s"
+          src={item.elem.image[2]}
           alt="iamge"
-        />
+          onClick = {() => handleImage(item.elem.image[2])}/>
         <Image
           boxSize="52px"
           height="66px"
           object-fit="cover"
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvBR5bnG1AfHRJ8kX79I-1Z1EfNvxKyZqiM27HASBL&s"
+          src={item.elem.image[3]}
           alt="iamge"
-        />
-        <Image
-          boxSize="52px"
-          height="66px"
-          object-fit="cover"
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvBR5bnG1AfHRJ8kX79I-1Z1EfNvxKyZqiM27HASBL&s"
-          alt="iamge"
-        />
+          onClick = {() => handleImage(item.elem.image[3])}/>
+        
       </VStack>
     </div>
   );

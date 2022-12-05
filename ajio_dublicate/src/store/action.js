@@ -1,4 +1,11 @@
-import React from 'react'
+import React from 'react';
+
+export const ImageAction = (data, dispatch) => {
+    dispatch({
+        type: "setImage",
+        payload: data,
+    })
+}
 
 export const Add = (data, dispatch) => {
     dispatch({
@@ -28,5 +35,20 @@ export const updateQunatitySize = (data, dispatch) => {
     dispatch({
         type: "DELETE",
         payload: arr,
+    })
+}
+export const updateAction = (data, dispatch) => {
+    
+    dispatch({
+        type: "RefreshPage",
+        payload: data,
+    })
+}
+
+export const updateCart = (data, dispatch) => {
+    
+    dispatch({
+        type: "CART",
+        payload: data,
     })
 }
