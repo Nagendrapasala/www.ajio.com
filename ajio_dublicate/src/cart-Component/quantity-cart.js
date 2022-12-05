@@ -10,9 +10,9 @@ function Quenatity(props) {
     let cartData = useSelector((storedata) => { return storedata.cart });
 
     const updateQuantity = () => {
-        cartData.map((elem, ind) => {
+        cartData.map((e, ind) => {
             if (ind == props.value.index) {
-                elem.Quantity = noOfItem
+                e.elem.Quantity = noOfItem
             }
         })
         updateQunatitySize(cartData, dispatch);

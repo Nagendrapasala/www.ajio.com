@@ -10,35 +10,35 @@ function Cart() {
     let dispatch = useDispatch();
     let [bagtotal, setTotal] = useState("0");
     let [totalprice, setPrice] = useState("0");
-    let [cartData, setCartData] = useState(localStorage.getItem("cart"));
+    let [cartData, setCartData] = useState(JSON.parse(localStorage.getItem("cart")));
     console.log(cartData);
     // let cartData = useSelector((storedata) => { return storedata.cart })
     useEffect(() => {
         setTotal(0);
         setPrice(0);
-        cartData.map((elem) => {
-            setTotal((prev) => (parseInt(prev) + (parseInt(elem.strikedoffPrice) * parseInt(elem.Quantity))))
-            setPrice((prev) => (parseInt(prev) + (parseInt(elem.price) * parseInt(elem.Quantity))))
+        cartData.map((e) => {
+            setTotal((prev) => (parseInt(prev) + ((e.elem.price) + ((e.elem.offer_percent) / 100) * (e.elem.price))))
+            setPrice((prev) => (parseInt(prev) + (parseInt(e.elem.price) * parseInt(e.elem.Quantity))))
         })
     }, [cartData])
 
     const deleteItem = (ind) => {
         deleteCartAction(cartData, dispatch, ind)
     }
-    
+
     return (
         <div className="cart_parent_div">
             <div className="cart_parent_child_div">
                 <p>My Bag <span>({cartData.length})</span></p>
                 {cartData.map((e, ind) => {
                     return <div key={ind + 1} className="cart_child_div">
-                        <img src={e.elem.image} alt={elem.title} />
+                        <img src={e.elem.image[0]} alt={e.elem.title} />
                         <p className="cart_div_child_p">{e.elem.title}</p>
                         <div className="cart_child_child1_div"><Quenatity value={{ index: ind, quantity: e.elem.Quantity }} /> {e.elem.Quantity}</div>
                         <div className="cart_child_child_div">
-                            <p>Savings : <span className="price_brown_class">Rs. {parseInt((e.elem.price) + ((e.elem.offer_percent)/100) * (e.elem.price)) - e.elem.price}</span></p>
-                            <p className="price_brown_class_line">Rs. {e.elem.strikedoffPrice}</p><span className="price_brown_class"> ({Math.floor((e.elem.strikedoffPrice - e.elem.price) * 100 / e.elem.strikedoffPrice)}%)</span>
-                            <p>Rs. {e.elem.price}.00</p>
+                            <p>Savings : <span className="price_brown_class">Rs. {(parseInt((e.elem.price) + ((e.elem.offer_percent) / 100) * (e.elem.price)) * e.elem.Quantity) - e.elem.price}</span></p>
+                            <p className="price_brown_class_line">Rs. {(parseInt((e.elem.price) + ((e.elem.offer_percent) / 100) * (e.elem.price)) * e.elem.Quantity)}</p><span className="price_brown_class"> ({Math.floor(e.elem.offer_percent)}%)</span>
+                            <p>Rs. {(e.elem.price) * e.elem.Quantity}.00</p>
                             <button onClick={() => deleteItem(ind)}>Delete</button>
                         </div>
                     </div>
