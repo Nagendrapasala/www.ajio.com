@@ -42,7 +42,7 @@ let mainproductfour = {
   padding: "30px",
 }
 export const Productpage = () => {
-  const [value, setValue] = useControllableState({ defaultValue: [] })
+  const [value, setValue] = useState([])
   const[check,setCheck] = useState(true);
 let dispatch = useDispatch()
 let data = useSelector((storedata)=>(storedata.data))
@@ -89,8 +89,8 @@ let product_filter = {
   Discount:['21-30%','31-40%','41-50','51-80%','Free'],
   Size:['S','M','L','XL','XXL','XXXL']
 }
-function change_filter(v){
-  let arr = data.filter(e=>(v===e.v))
+function Men_filter(){
+  let arr = data.filter(e=>(e.category.gender==="Women"))
   console.log(arr)
   setValue(arr);
 }
@@ -118,7 +118,13 @@ function change_filter(v){
         <AccordionIcon />
       </AccordionButton>
     </h2>
-    <AccordionItem1 name={product_filter.Gender} arr={change_filter} />
+    <AccordionPanel pb={4}>
+      <input onChange={Men_filter} type="checkbox"></input>&nbsp;
+      <label>Male</label></AccordionPanel>
+      <AccordionPanel pb={4}>
+      <input type="checkbox"></input>&nbsp;
+      <label>FEMALE</label></AccordionPanel>
+    
   </AccordionItem>
 </Accordion>
     </AccordionPanel>
@@ -134,7 +140,30 @@ function change_filter(v){
         <AccordionIcon />
       </AccordionButton>
     </h2>
-    <AccordionItem1 name={product_filter.Category} arr={change_filter}/>
+    <AccordionPanel pb={4}>
+      <input type="checkbox"></input>&nbsp;
+      <label>Tshirts</label></AccordionPanel>
+      <AccordionPanel pb={4}>
+      <input type="checkbox"></input>&nbsp;
+      <label>Track Pants</label></AccordionPanel>
+      <AccordionPanel pb={4}>
+      <input type="checkbox"></input>&nbsp;
+      <label>Sneakers & Sports Shoes</label></AccordionPanel>
+      <AccordionPanel pb={4}>
+      <input type="checkbox"></input>&nbsp;
+      <label>Shorts & 3/4ths</label></AccordionPanel>
+      <AccordionPanel pb={4}>
+      <input type="checkbox"></input>&nbsp;
+      <label>Sweatshirt & Hoodies</label></AccordionPanel>
+      <AccordionPanel pb={4}>
+      <input type="checkbox"></input>&nbsp;
+      <label>Jackets & Coats</label></AccordionPanel>
+      <AccordionPanel pb={4}>
+      <input type="checkbox"></input>&nbsp;
+      <label>Flip Flop & Slippers</label></AccordionPanel>
+      <AccordionPanel pb={4}>
+      <input type="checkbox"></input>&nbsp;
+      <label>Bags,Belts & Wallets</label></AccordionPanel>
   </AccordionItem>
 </Accordion>
     </AccordionPanel>
@@ -150,7 +179,24 @@ function change_filter(v){
         <AccordionIcon />
       </AccordionButton>
     </h2>
-    <AccordionItem1 name={product_filter.Price} arr={change_filter}/>
+    <AccordionPanel pb={4}>
+      <input type="checkbox"></input>&nbsp;
+      <label>Below 500</label></AccordionPanel>
+      <AccordionPanel pb={4}>
+      <input type="checkbox"></input>&nbsp;
+      <label>500-1000</label></AccordionPanel>
+      <AccordionPanel pb={4}>
+      <input type="checkbox"></input>&nbsp;
+      <label>1001-1500</label></AccordionPanel>
+      <AccordionPanel pb={4}>
+      <input type="checkbox"></input>&nbsp;
+      <label>1501-2000</label></AccordionPanel>
+      <AccordionPanel pb={4}>
+      <input type="checkbox"></input>&nbsp;
+      <label>2001-2500</label></AccordionPanel>
+      <AccordionPanel pb={4}>
+      <input type="checkbox"></input>&nbsp;
+      <label>Above 2500</label></AccordionPanel>
   </AccordionItem>
 </Accordion>
     </AccordionPanel>
@@ -166,7 +212,21 @@ function change_filter(v){
         <AccordionIcon />
       </AccordionButton>
     </h2>
-    <AccordionItem1 name={product_filter.Discount} arr={change_filter}/>
+    <AccordionPanel pb={4}>
+      <input type="checkbox"></input>&nbsp;
+      <label>21-30%</label></AccordionPanel>
+      <AccordionPanel pb={4}>
+      <input type="checkbox"></input>&nbsp;
+      <label>31-40%</label></AccordionPanel>
+      <AccordionPanel pb={4}>
+      <input type="checkbox"></input>&nbsp;
+      <label>41-50%</label></AccordionPanel>
+      <AccordionPanel pb={4}>
+      <input type="checkbox"></input>&nbsp;
+      <label>51-80%</label></AccordionPanel>
+      <AccordionPanel pb={4}>
+      <input type="checkbox"></input>&nbsp;
+      <label>FREE</label></AccordionPanel>
   </AccordionItem>
 </Accordion>
     </AccordionPanel>
@@ -182,7 +242,15 @@ function change_filter(v){
         <AccordionIcon />
       </AccordionButton>
     </h2>
-    <AccordionItem1 name={product_filter.Brand} arr={change_filter}/>
+    <AccordionPanel pb={4}>
+      <input type="checkbox"></input>&nbsp;
+      <label>PUMA</label></AccordionPanel>
+      <AccordionPanel pb={4}>
+      <input type="checkbox"></input>&nbsp;
+      <label>LEVIS</label></AccordionPanel>
+      <AccordionPanel pb={4}>
+      <input type="checkbox"></input>&nbsp;
+      <label>ADIDAS</label></AccordionPanel>
   </AccordionItem>
 </Accordion>
     </AccordionPanel>
@@ -198,7 +266,24 @@ function change_filter(v){
         <AccordionIcon />
       </AccordionButton>
     </h2>
-    <AccordionItem1 name={product_filter.Size} arr={change_filter}/>
+    <AccordionPanel pb={4}>
+      <input type="checkbox"></input>&nbsp;
+      <label>S(Small)</label></AccordionPanel>
+      <AccordionPanel pb={4}>
+      <input type="checkbox"></input>&nbsp;
+      <label>M(Medium)</label></AccordionPanel>
+      <AccordionPanel pb={4}>
+      <input type="checkbox"></input>&nbsp;
+      <label>L(Large)</label></AccordionPanel>
+      <AccordionPanel pb={4}>
+      <input type="checkbox"></input>&nbsp;
+      <label>XL(Extra Large)</label></AccordionPanel>
+      <AccordionPanel pb={4}>
+      <input type="checkbox"></input>&nbsp;
+      <label>XXL(2 x Large)</label></AccordionPanel>
+      <AccordionPanel pb={4}>
+      <input type="checkbox"></input>&nbsp;
+      <label>XXXL(3 x Large)</label></AccordionPanel>
   </AccordionItem>
 </Accordion>
     </AccordionPanel>
