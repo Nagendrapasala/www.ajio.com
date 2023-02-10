@@ -24,8 +24,8 @@ export const AccordionItem1 = ({name,arr}) => {
   return (
     name.map(e=>(
       <AccordionPanel pb={4}>
-      <input value={e} onChange={function(e){arr(e)}} type="checkbox"></input>&nbsp;
-      <label>{e}</label></AccordionPanel>
+      <input type="checkbox"></input>&nbsp;
+      <label></label></AccordionPanel>
     ))
   )
 }
